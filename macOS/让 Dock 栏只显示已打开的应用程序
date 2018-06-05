@@ -1,0 +1,5 @@
+defaults write com.apple.dock static-only -boolean true; killall Dock
+
+恢复
+
+defaults write com.apple.dock static-only -bool FALSE; killall Dock

@@ -1,0 +1,7 @@
+     所有硬盘
+sudo mdutil -E /
+mac主磁盘
+sudo mdutil -E /Volumes/Macintosh\ HD/
+外接磁盘
+sudo mdutil -E /Volumes/External/
+磁盘名字可能要对应更改

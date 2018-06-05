@@ -1,0 +1,15 @@
+#!/bin/bash
+# osx_init
+#OSX (macOS) init scripts for own use
+#author: ibegyourpardon@github.com
+
+
+
+npm install hexo-cli -g
+
+
+hexo init blog
+cd blog
+npm install
+
+npm install hexo-deployer-git --save

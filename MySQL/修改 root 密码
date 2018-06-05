@@ -1,0 +1,11 @@
+修改 root 密码
+
+--skip-grant-tables
+
+sudo mysqld_safe --skip-grant-tables --skip-networking &
+
+
+UPDATE user SET password=PASSWORD("new password") WHERE user='root';
+
+FLUSH PRIVILEGES;
+

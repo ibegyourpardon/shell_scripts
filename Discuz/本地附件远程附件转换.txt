@@ -1,0 +1,28 @@
+
+
+在后台--站长--数据库--升级--分别执行如下代码
+
+1、pre_forum_attachment
+
+update pre_forum_attachment_0 set remote = '1';
+update pre_forum_attachment_1 set remote = '1';
+update pre_forum_attachment_2 set remote = '1';
+update pre_forum_attachment_3 set remote = '1';
+update pre_forum_attachment_4 set remote = '1';
+update pre_forum_attachment_5 set remote = '1';
+update pre_forum_attachment_6 set remote = '1';
+update pre_forum_attachment_7 set remote = '1';
+update pre_forum_attachment_8 set remote = '1';
+update pre_forum_attachment_9 set remote = '1';
+
+
+2、pre_portal_article_title，pre_portal_attachment，pre_portal_topic_pic
+ 
+update pre_portal_article_title set remote=1;
+update pre_portal_attachment set remote=1;
+update pre_portal_topic_pic set remote=1;
+
+
+3、由于相册表中的remote取值还有一种情况为remote=2(论坛附件图片保存到相册)pre_home_pic，执行语句：
+ 
+update pre_home_pic set remote=remote+1;

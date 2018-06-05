@@ -1,0 +1,9 @@
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}';killall Dock
+
+//左栏添加空格
+
+
+
+defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}' ;killall Dock
+
+//右栏添加空格

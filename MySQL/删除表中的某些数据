@@ -1,0 +1,1 @@
+delete from MyClass where id=1;
