@@ -1,0 +1,16 @@
+#!/bin/bash
+STATE_OK=0
+STATE_CRITICAL=2
+STATE_UNKNOWN=3
+filename=`date +%s`
+dir=/tmp/
+result=`touch ${dir}/${filename}`
+if [ $? -eq 0 ];then
+	echo -e "OK: system disk is ok! | result=$?"
+	rm ${dir}/${filename}
+	exit "$STATE_OK"
+else
+	echo -e "CRITICAL: system read only result is ${result} | result=$?"
+	exit "$STATE_CRITICAL"
+fi
+exit "$STATE_UNKNOWN"

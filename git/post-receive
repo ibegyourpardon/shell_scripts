@@ -1,0 +1,13 @@
+#!/bin/sh
+unset GIT_DIR
+NowPath=`pwd`
+DeployPath="../../www"
+cd $DeployPath
+git add . -A && git stash
+git pull origin master
+#下面两步是我的Node.js应用配置，需要按照你的实际情况改动
+#npm install #安装npm包
+#pm2 restart server #使用pm2重新启动应用
+cd $NowPath
+echo "deploy done"
+exit 0
